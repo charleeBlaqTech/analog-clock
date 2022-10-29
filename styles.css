@@ -1,0 +1,479 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: sans-serif;
+    margin:auto;
+    padding: 0;
+}
+a{
+    color: #fff;
+}
+nav{
+    margin:auto;
+    background-color: rgb(187, 223, 116);
+    width: 100%;
+    height: 60px;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+}
+.nav-container{
+    margin: 15px auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    position: absolute;
+}
+.nav-container .nav-links{
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    align-content: center;
+    font-weight: 400;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+
+}
+.nav-container h3{
+    font-weight: 600;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.clock-container{
+    width: 500px;
+    height: 500px;
+    border: 20px solid palevioletred;
+    background-color: bisque;
+    border-radius: 50%;
+    margin:auto;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.point{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: bisque;
+    position: absolute;
+    top: 200px;
+    left: 210px;
+    z-index: 11;
+}
+.hour{
+    font-size: 30px;
+    font-weight: bold;
+    color: gray;
+    position: absolute;
+}
+.hour-1{
+    top: 35px;
+    right: 120px;
+}
+.hour-2{
+    top: 100px;
+    right: 50px;
+}
+.hour-3{
+    top: 195px;
+    right: 10px;
+}
+.hour-4{
+    bottom: 135px;
+    right: 30px;
+}
+.hour-5{
+    bottom: 40px;
+    right: 90px;
+}
+.hour-6{
+    bottom: 10px;
+    right: 210px;
+}
+.hour-7{
+    bottom: 40px;
+    left: 95px;
+}
+.hour-8{
+    bottom: 139px;
+    left: 26px;
+}
+.hour-9{
+    top: 200px;
+    left: 10px;
+}
+.hour-10{
+    top: 110px;
+    left:30px;
+}
+.hour-11{
+    top: 40px;
+    left: 100px;
+}
+.hour-12{
+    top: 4px;
+    right: 210px;
+}
+.minute-hand-wrapper{
+    width: 350px;
+    height: 350px;
+    background-color: grey;
+    position:absolute;
+    top: 55px;
+    left: 55px;
+    border-radius: 50%;
+}
+.minute-hand{
+    position: relative;
+}
+.minute-hand .hand{
+    width: 6px;
+    height: 210px;
+    background-color: palevioletred;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    position:absolute;
+    left: 179px ;
+    top:-18px;
+    z-index: 10;
+}
+.hour-hand-wrapper{
+    width: 300px;
+    height: 300px;
+    position:absolute;
+    top: 80px;
+    left: 80px;
+    border-radius: 50%;
+}
+.hour-hand{
+    position: relative;
+}
+.hour-hand .hand{
+    width: 9px;
+    height: 130px;
+    background-color:palevioletred;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    position:absolute;
+    left: 153.3px ;
+    z-index: 10;
+}
+
+.seconds-hand-wrapper{
+    width: 250px;
+    height: 250px;
+    position:absolute;
+    top: 105px;
+    left: 105px;
+    border-radius: 50%;
+}
+.seconds-hand{
+    position: relative;
+}
+.seconds-hand .hand{
+    width: 3px;
+    height: 270px;
+    background-color:red;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    position:absolute;
+    left: 130px ;
+    bottom: -170px;
+    z-index: 10;
+}
+
+.logo{
+    position: absolute;
+    color: black;
+    width: fit-content;
+    font-size: 2rem;
+    font-weight: bolder;
+    top: 70px;
+    left: 170px;
+    z-index: 8;
+}
+.logo-2{
+    position: absolute;
+    color: black;
+    width: fit-content;
+    font-size: 2rem;
+    font-weight: bolder;
+    bottom: 70px;
+    left: 200px;
+    z-index: 8;
+}
+
+.hamburger{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    justify-content: center;
+    align-content: center;
+    display: none;
+    margin:auto 0;
+}
+.bar{
+    width: 30px;
+    height: 5px;
+    background-color:black;
+    justify-content: center;
+}
+#bar1{
+    margin :2px auto;
+}
+#bar2{
+    margin :2px auto;
+}
+#bar3{
+    margin :2px auto;
+}
+@media (max-width:699px) {
+    .clock-container{
+        width: 400px;
+        height: 400px;
+        top: 60px;
+        left: 30%;
+        transform: translate(-30%);
+    }
+    .point{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: bisque;
+        position: absolute;
+        top: 160px;
+        left: 1690px;
+        z-index: 11;
+    }
+    .hour{
+        font-size: 30px;
+        font-weight: bold;
+        color: gray;
+        position: absolute;
+    }
+    .hour-1{
+        top: 24px;
+        right: 90px;
+    }
+    .hour-2{
+        top: 100px;
+        right: 50px;
+    }
+    .hour-3{
+        top: 195px;
+        right: 10px;
+    }
+    .hour-4{
+        bottom: 135px;
+        right: 30px;
+    }
+    .hour-5{
+        bottom: 40px;
+        right: 90px;
+    }
+    .hour-6{
+        bottom: 10px;
+        right: 210px;
+    }
+    .hour-7{
+        bottom: 40px;
+        left: 95px;
+    }
+    .hour-8{
+        bottom: 139px;
+        left: 26px;
+    }
+    .hour-9{
+        top: 200px;
+        left: 10px;
+    }
+    .hour-10{
+        top: 110px;
+        left:30px;
+    }
+    .hour-11{
+        top: 40px;
+        left: 100px;
+    }
+    .hour-12{
+        top: 4px;
+        right: 210px;
+    }
+    .minute-hand-wrapper{
+        width: 350px;
+        height: 350px;
+        background-color: grey;
+        position:absolute;
+        top: 55px;
+        left: 55px;
+        border-radius: 50%;
+    }
+    .minute-hand{
+        position: relative;
+    }
+    .minute-hand .hand{
+        width: 6px;
+        height: 210px;
+        background-color: palevioletred;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        position:absolute;
+        left: 179px ;
+        top:-18px;
+        z-index: 10;
+    }
+    .hour-hand-wrapper{
+        width: 300px;
+        height: 300px;
+        position:absolute;
+        top: 80px;
+        left: 80px;
+        border-radius: 50%;
+    }
+    .hour-hand{
+        position: relative;
+    }
+    .hour-hand .hand{
+        width: 9px;
+        height: 130px;
+        background-color:palevioletred;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        position:absolute;
+        left: 153.3px ;
+        z-index: 10;
+    }
+    
+    .seconds-hand-wrapper{
+        width: 250px;
+        height: 250px;
+        position:absolute;
+        top: 105px;
+        left: 105px;
+        border-radius: 50%;
+    }
+    .seconds-hand{
+        position: relative;
+    }
+    .seconds-hand .hand{
+        width: 3px;
+        height: 270px;
+        background-color:red;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        position:absolute;
+        left: 130px ;
+        bottom: -170px;
+        z-index: 10;
+    }
+    
+    .logo{
+        position: absolute;
+        color: black;
+        width: fit-content;
+        font-size: 2rem;
+        font-weight: bolder;
+        top: 70px;
+        left: 170px;
+        z-index: 8;
+    }
+    .logo-2{
+        position: absolute;
+        color: black;
+        width: fit-content;
+        font-size: 2rem;
+        font-weight: bolder;
+        bottom: 70px;
+        left: 200px;
+        z-index: 8;
+    }
+    
+    .hamburger{
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        justify-content: center;
+        align-content: center;
+        display: none;
+        margin:auto 0;
+    }
+    .bar{
+        width: 30px;
+        height: 5px;
+        background-color:black;
+        justify-content: center;
+    }
+    #bar1{
+        margin :2px auto;
+    }
+    #bar2{
+        margin :2px auto;
+    }
+    #bar3{
+        margin :2px auto;
+    }
+}
+
+
+
+@media(max-width:500px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(6px) rotate(30deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-9px) rotate(-30deg);
+    }
+    nav{
+        width: 100%;
+    }
+    .nav-container{
+        width: 100%;
+        gap: 20px;
+        justify-content: space-between;
+    }
+    .section{
+        top: 75px;
+        min-height: 100vh;
+    }
+    
+    .nav-links{
+        width: 150px;
+        font-size: 50px;
+        font-weight:50px;
+        display: flex;
+        flex-direction: column;
+        gap:0;
+        position:fixed;
+        top:60px;
+        right:-100%;
+        bottom: 0;
+        background-color:  rgb(187, 223, 116);
+
+    }
+    .nav-links li a{
+        color: #fff;
+        font-weight: lighter;
+    }
+    .nav-links.active{
+        right:0;
+    }
+
+
+}
